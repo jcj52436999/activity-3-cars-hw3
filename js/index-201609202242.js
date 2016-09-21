@@ -12,7 +12,7 @@ var canvasWidth = view.size.width;
 var makeCar = function ( x, y, colorBod, styleBod, scaleBodX, flipBodY, signChoicesArray, clickChoicesArray ) {
     // colorBod = 'red';
     // sedan, putfslb
-    var layerArray = [];
+    var layerArray = [] ;
 
     var carBody = new Path.Rectangle({
         point: [0, 20],
