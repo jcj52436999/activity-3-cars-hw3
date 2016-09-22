@@ -80,7 +80,7 @@ function onMouseUp(event) {
       autoAssy.onClick = function (event) {
         console.log("redirecting via mouse");
         alert("redirecting...");
-        window.location = "https://www.google.com";
+        window.location = "https://jcj52436999.github.io/wellKnowIt/";
     };
     }
 
