@@ -13,28 +13,6 @@ var makeCar = function ( x, y, colorBod, styleBod, scaleBodX, flipBodY, signChoi
     // colorBod = 'red';
     // sedan, putfslb
 
-    var defaultAuto = {
-        "id": 0,
-        "type": "sedan",
-        "name": "sedanDefault1",
-        "wheelSet": {
-            "wheel1":  {
-                "center": [75 , 45],
-                "radius": 12,
-                "fillColor": '#444'
-            },
-            "wheel2":  {
-                "center": [24 , 45],
-                "radius": 12,
-                "fillColor": '#444'
-            },
-            "wheel3":  {
-                "center": [0 , 0],
-                "radius": 0,
-                "fillColor": '#444'
-            }
-        }
-    }
 
     var layerArray = [];
 
