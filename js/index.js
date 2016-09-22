@@ -80,7 +80,7 @@ function onMouseUp(event) {
       autoAssy.onClick = function (event) {
         console.log("redirecting via mouse");
         alert("redirecting...");
-        window.location = "https://www.jcjacksonconsulting.com";
+        window.location = "https://www.google.com";
     };
     }
 
