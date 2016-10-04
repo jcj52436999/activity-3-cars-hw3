@@ -18,57 +18,57 @@ var makeCar = function ( x, y, colorBod, spriteStyleVar, scaleBodX, flipBodY, si
 
     var spritePartSpec = [];
     var defaultSprite = {
-        "spriteStyleVar": "exists",
-        "id": 0,
-        "spriteDataSchema": "singleLayer",
-        "type": "sedan",
-        "name": "sedanDefault1",
+        spriteStyleVar: "exists",
+        id: 0,
+        spriteDataSchema: "singleLayer",
+        type: "sedan",
+        name: "sedanDefault1",
 
         // carBody: {
         // spritePartSpec:{
         "0":{
-            "spriteBuildMethod": "Path.Rectangle",
-            "spritePartCount": 1,
-            "spritePart": "carBody",
-            "point": [0, 20],
-            "size": [100, 25],
-            "fillColor": colorBod
+            spriteBuildMethod: "Path.Rectangle",
+            spritePartCount: 1,
+            spritePart: "carBody",
+            point: [0, 20],
+            size: [100, 25],
+            fillColor: colorBod
         },
 
         // carTop: {
         "1":{
-            "spriteBuildMethod": "Path.Rectangle",
-            "spritePartCount": 2,
-            "spritePart": "carTop",
-            "point": [15, 0],
-            "size": [50, 25],
-            "fillColor": colorBod
+            spriteBuildMethod: "Path.Rectangle",
+            spritePartCount: 2,
+            spritePart: "carTop",
+            point: [15, 0],
+            size: [50, 25],
+            fillColor: colorBod
         },
 
 
         "2":{
-            "spriteBuildMethod": "Path.Circle",
-            "spritePartCount": 3,
-            "spritePart": "wheel1",
-            "center": [75 , 45],
-            "radius": 12,
-            "fillColor": '#444'
+            spriteBuildMethod: "Path.Circle",
+            spritePartCount: 3,
+            spritePart: "wheel1",
+            center: [75 , 45],
+            radius: 12,
+            fillColor: '#444'
         },
         "3":{
-            "spriteBuildMethod": "Path.Circle",
-            "spritePartCount": 4,
-            "spritePart": "wheel2",
-            "center": [24 , 45],
-            "radius": 12,
-            "fillColor": '#444'
+            spriteBuildMethod: "Path.Circle",
+            spritePartCount: 4,
+            spritePart: "wheel2",
+            center: [24 , 45],
+            radius: 12,
+            fillColor: '#444'
         },
         "4":{
-            "spriteBuildMethod": "Path.Circle",
-            "spritePartCount": 5,
-            "spritePart": "",
-            "center": [0 , 0],
-            "radius": 0,
-            "fillColor": '#444'
+            spriteBuildMethod: "Path.Circle",
+            spritePartCount: 5,
+            spritePart: "",
+            center: [0 , 0],
+            radius: 0,
+            fillColor: '#444'
         }
 
     }
@@ -83,7 +83,7 @@ var makeCar = function ( x, y, colorBod, spriteStyleVar, scaleBodX, flipBodY, si
     var layerSpritePartsArray = [];
 
     switch( spriteLoopChoiceArr[0] ){
-      case "spriteStyleVarKEYForLoop":  // case eventually desired, for loop automation self senses the spec var
+      case "spriteStyleVarKEYForLoop":
         // /*
         for ( k in spriteSubSpecChosen){
      // BROKEN key seeking loop based sprite parts assembly, uses above data bag for spec
@@ -290,11 +290,11 @@ var spriteStyleVar = {spriteStyleVar: "notExists"};
 // var for choosing loop to read spriteStypeVar is either "spriteStyleVarKEYForLoop" or "spriteStyleVarNUMBERForLoop" OR "spriteStyleVarKPARAGRAPHS"
 //  " is in an array like [ "spriteStyleVarNUMBERForLoop" , 4], where the second value is an integer for loop counts for NUMBER CONTROLLED LOOP
 //call makeCar function:
-var car1 = makeCar( 0, 50, 'red', (spriteStyleVar), -.5, .5, ['noSign'], ['noClick'], "car1", ["spriteStyleVarNUMBERForLoop", 4]);
+var car1 = makeCar( 0, 50, 'red', (spriteStyleVar), -.5, .5, ['noSign'], ['noClick'], "car1", ["0spriteStyleVarKEYForLoop", 4]);
 // alert("Makes it through var car1. ")
-var car2 = makeCar( 0, 100, 'blue', (spriteStyleVar), -.75, .75, ['noSign'], ['noClick'], "car2", ["spriteStyleVarNUMBERForLoop", 4]);
-var car3 = makeCar( 0, 150, 'green', (spriteStyleVar), 1.2, 1.2, ['noSign'], ['noClick'], "car3", ["spriteStyleVarNUMBERForLoop", 4]);
-var car4 = makeCar( 0, 200, 'orange', (spriteStyleVar), 2, -2, ['Driver \nin Training','center','black'], ['yesClick'], "car4", ["spriteStyleVarNUMBERForLoop", 4]);
+var car2 = makeCar( 0, 100, 'blue', (spriteStyleVar), -.75, .75, ['noSign'], ['noClick'], "car2", ["0spriteStyleVarKEYForLoop", 4]);
+var car3 = makeCar( 0, 150, 'green', (spriteStyleVar), 1.2, 1.2, ['noSign'], ['noClick'], "car3", ["0spriteStyleVarKEYForLoop", 4]);
+var car4 = makeCar( 0, 200, 'orange', (spriteStyleVar), 2, -2, ['Driver \nin Training','center','black'], ['yesClick'], "car4", ["0spriteStyleVarKEYForLoop", 4]);
 // alert("car4 done.");
 
 var put1 = makeCar(0, 250, 'yellow', (spriteStyleVar), 2, 2, ['noSign'], ['noClick'], "put1", ["spriteStyleVarNUMBERForLoop", 4]);
