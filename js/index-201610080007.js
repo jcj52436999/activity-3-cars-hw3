@@ -334,7 +334,7 @@ var fishSprite = {
             "spriteBuildMethod": "Path.Ellipse",
             "spritePartCount": 1,
             "spritePart": "fishBody",
-            "point": [20, 20],
+            "point": [100, 300],
             "size": [180, 60],
             "fillColor": "orange"
         },
@@ -346,18 +346,29 @@ var path = new Path.Ellipse({
     fillColor: 'black'
 });
 */
+        /*
+        // fishTailPoint
+        "1":{
+            "spriteBuildMethod": "Path.Point",
+            "spritePartCount": 2,
+            "spritePart": "fishTailPoint",
+            "point": [50, 50]
+
+        },
+        */
+
 
         // fishTail: {
         "1":{
-            "spriteBuildMethod": "Path.RegularPolygon",
-            "spritePartCount": 2,
-            "spritePart": "fishTail",
-            "point": [30, 23],
-            "sides": 3,
-            "radius": 40,
+            "point": [40,310],
+            "size": [88,50],
+            // "radius": 50,
             "fillColor": "red",
-            "rotate": -150,
-            "selected": "true"
+            // "rotate": -250,
+            "selected": "true",
+            "spritePart": "fishTail",
+            "spriteBuildMethod": "Path.Rectangle",
+            "spritePartCount": 2
         },
 
 /*
@@ -372,7 +383,7 @@ triangle.fillColor = 'black';
             "spriteBuildMethod": "Path.Circle",
             "spritePartCount": 3,
             "spritePart": "fishEye",
-            "center": [150 , 45],
+            "center": [240 , 320],
             "radius": 12,
             "fillColor": '#444'
         },
@@ -386,7 +397,7 @@ triangle.fillColor = 'black';
         },
         "4":{
             "spriteBuildMethod": "Path.Circle",
-            "spritePartCount": 5,
+            "spritePartCount": 6,
             "spritePart": "",
             "center": [0 , 0],
             "radius": 0,
@@ -406,12 +417,29 @@ var spriteStyleVar = {spriteStyleVar: "notExists"};
 var car1 = makeSprite( 0, 50, 'red', (spriteStyleVar), -.5, .5, ['noSign'], ['noClick'], "car1", ["spriteStyleVarNUMBERForLoop", 4]);
 // alert("Makes it through var car1. ")
 var car2 = makeSprite( 0, 100, 'blue', (spriteStyleVar), -.75, .75, ['noSign'], ['noClick'], "car2", ["spriteStyleVarNUMBERForLoop", 4]);
+
 var car3 = makeSprite( 0, 150, 'green', (spriteStyleVar), 1.2, 1.2, ['noSign'], ['noClick'], "car3", ["spriteStyleVarNUMBERForLoop", 4]);
+
 var car4 = makeSprite( 0, 200, 'orange', (spriteStyleVar), 2, -2, ['Driver \nin Training','center','black'], ['yesClick'], "car4", ["spriteStyleVarNUMBERForLoop", 4]);
 // alert("car4 done.");
 
 var put1 = makeSprite(0, 250, 'yellow', (spriteStyleVar), 2, 2, ['noSign'], ['noClick'], "put1", ["spriteStyleVarNUMBERForLoop", 4]);
-var fish1 = makeSprite(300, 230, 'yellow', (fishSprite), 1, 1, ['noSign'], ['noClick'], "fish1", ["spriteStyleVarNUMBERForLoop", 3]);     //  spriteStyleVarKEYForLoop
+
+var fish1 = makeSprite(100, 340, 'yellow', (fishSprite), 1, 1, ['noSign'], ['noClick'], "fish1", ["spriteStyleVarNUMBERForLoop", 3]);     //  spriteStyleVarKEYForLoop
+var fin = new Path.RegularPolygon(new Point(150, 390), 3, 30);
+fin.fillColor = '#e9e9ff';
+fin.rotate(20);
+fin.selected = true;
+
+
+var fish2 = makeSprite(50, 400, 'pink', (fishSprite), 1, 1, ['noSign'], ['noClick'], "fish1", ["spriteStyleVarNUMBERForLoop", 3]);     //  spriteStyleVarKEYForLoop
+var fin = new Path.RegularPolygon(new Point(100, 450), 3, 30);
+fin.fillColor = '#e9e9ff';
+fin.rotate(20);
+fin.selected = true;
+// fish2.add(fin);
+
+
 // alert("put1 done.");
         /*
         put1.sign.justification = 'center';
@@ -433,5 +461,6 @@ view.onFrame = function (event) {
     moveSprite(car3, 4);
     moveSprite(car4, 7);
     moveSprite(put1, 8);
-
+    moveSprite(fish1, 3);
+    moveSprite(fish2, 2);
 };
